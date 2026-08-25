@@ -1,12 +1,13 @@
 {
-  "name": "cgc-site",
+  "name": "cgc",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "format:content": "npx prettier@3.5.3 --parser html --write content/colabs-home-head.html content/colabs-home-body.html && npx prettier@3.5.3 --write content/colabs-next-data.json"
   },
   "dependencies": {
     "next": "16.2.9",
