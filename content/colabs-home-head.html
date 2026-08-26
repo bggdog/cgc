@@ -1998,7 +1998,690 @@
       opacity: 1 !important;
       transform: none !important;
     }
-  }.Content_Content__Pm8xD:has(.cg-expertise) {
+  }
+  .Content_Content__Pm8xD:has(.cg-resources) {
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+  .Content_Content__Pm8xD:has(.cg-resources) > .container {
+    padding: 0;
+    max-width: none;
+    width: 100%;
+  }
+  .Content_Content__Pm8xD:has(.cg-resources) > .container > h2 {
+    display: none;
+  }
+  .Content_Content__Pm8xD:has(.cg-resources) .Content_Copy__Ie90_ {
+    max-width: none;
+    margin: 0;
+  }
+  .Content_Content__Pm8xD:has(.cg-resources),
+  .Content_Content__Pm8xD:has(.cg-resources) .Content_Copy__Ie90_,
+  .Content_Content__Pm8xD:has(.cg-resources) .cg-resources {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+  .cg-resources {
+    --white: #ffffff;
+    --paper: #fdfcf9;
+    --ink: #1e2420;
+    --body: #626b66;
+    --green: #1d4a3a;
+    --green-2: #163c2f;
+    --gold: #d3aa6e;
+    --gold-bg: #f5ead7;
+    --sage: #eef2ee;
+    --rose: #dfb1a8;
+    --rose-2: #d5a096;
+    --r: 34px;
+    --notch: 24px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --slide-bg: var(--sage);
+    position: relative;
+    z-index: 1;
+    background: var(--paper);
+    font-family: "Poppins", -apple-system, sans-serif;
+    color: var(--body);
+    padding: clamp(80px, 9vw, 140px) clamp(18px, 3.5vw, 52px);
+    overflow: hidden;
+  }
+  .cg-resources *,
+  .cg-resources *::before,
+  .cg-resources *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .cg-resources .wrap {
+    position: relative;
+    max-width: 1360px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.3fr);
+    gap: clamp(36px, 5vw, 90px);
+    align-items: center;
+  }
+  .cg-resources .blob {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    will-change: transform;
+  }
+  .cg-resources .blob.a {
+    width: 160px;
+    height: 160px;
+    background: var(--gold-bg);
+    top: -50px;
+    left: -30px;
+  }
+  .cg-resources .blob.b {
+    width: 120px;
+    height: 120px;
+    background: var(--sage);
+    bottom: -30px;
+    right: 42%;
+  }
+  .cg-resources .lead {
+    position: relative;
+    z-index: 1;
+  }
+  .cg-resources .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--green);
+    border: 1.5px solid rgba(29, 74, 58, 0.22);
+    border-radius: 999px;
+    padding: 10px 22px;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 0.8s var(--ease),
+      transform 0.8s var(--ease);
+  }
+  .cg-resources .eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--rose);
+  }
+  .cg-resources .in .eyebrow {
+    opacity: 1;
+    transform: none;
+  }
+  .cg-resources h2 {
+    font-weight: 600;
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .cg-resources h2 .script {
+    display: block;
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-size: 1.34em;
+    color: var(--green);
+    padding-left: 0.35em;
+  }
+  .cg-resources h2 .w {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    padding-bottom: 0.12em;
+    margin-bottom: -0.12em;
+  }
+  .cg-resources h2 .w > span {
+    display: inline-block;
+    transform: translateY(115%);
+    transition: transform 1s var(--ease);
+  }
+  .cg-resources .in h2 .w:nth-child(1) > span {
+    transition-delay: 0.05s;
+  }
+  .cg-resources .in h2 .w:nth-child(2) > span {
+    transition-delay: 0.13s;
+  }
+  .cg-resources .in h2 .w:nth-child(3) > span {
+    transition-delay: 0.24s;
+  }
+  .cg-resources .in h2 .w > span {
+    transform: translateY(0);
+  }
+  .cg-resources .lead .note {
+    margin-top: 26px;
+    font-size: 14.5px;
+    line-height: 1.7;
+    max-width: 32ch;
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 0.9s var(--ease) 0.4s,
+      transform 0.9s var(--ease) 0.4s;
+  }
+  .cg-resources .in .lead .note {
+    opacity: 1;
+    transform: none;
+  }
+  .cg-resources .stage {
+    position: relative;
+    z-index: 1;
+    background: var(--slide-bg);
+    border-radius: var(--r);
+    border-top-left-radius: 110px;
+    padding: clamp(28px, 3vw, 48px) clamp(24px, 2.8vw, 48px)
+      clamp(24px, 2.4vw, 40px);
+    color: var(--ink);
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition:
+      opacity 1s var(--ease) 0.15s,
+      transform 1s var(--ease) 0.15s,
+      background 0.6s var(--ease);
+    touch-action: pan-y;
+  }
+  .cg-resources .in .stage {
+    opacity: 1;
+    transform: none;
+  }
+  .cg-resources .slides {
+    position: relative;
+  }
+  .cg-resources .slide {
+    position: absolute;
+    inset: 0 0 auto 0;
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: minmax(120px, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(20px, 2.5vw, 36px);
+    align-items: center;
+  }
+  .cg-resources .slide.active {
+    position: relative;
+    visibility: visible;
+  }
+  .cg-resources .slide[style*="--i: 0"] {
+    --accent: var(--sage);
+  }
+  .cg-resources .slide[style*="--i: 1"] {
+    --accent: var(--rose);
+  }
+  .cg-resources .slide[style*="--i: 2"] {
+    --accent: var(--gold-bg);
+  }
+  .cg-resources .slide[style*="--i: 3"] {
+    --accent: #d9ebe3;
+  }
+  .cg-resources .cover {
+    margin: 0;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(30, 36, 32, 0.14);
+    aspect-ratio: 3 / 4;
+    background: rgba(255, 255, 255, 0.35);
+  }
+  .cg-resources .cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s var(--ease);
+  }
+  .cg-resources .slide.active .cover img {
+    transform: scale(1.02);
+  }
+  .cg-resources .copy h3 {
+    font-size: clamp(22px, 2.2vw, 32px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    line-height: 1.15;
+  }
+  .cg-resources .copy .sub {
+    margin-top: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--green);
+  }
+  .cg-resources .copy .desc {
+    margin-top: 16px;
+    font-size: 14.5px;
+    line-height: 1.65;
+    max-width: 36ch;
+    color: rgba(30, 36, 32, 0.72);
+  }
+  .cg-resources .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 26px;
+    padding: 10px 12px 10px 26px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--green);
+    color: #fff;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      background 0.4s ease,
+      color 0.4s ease,
+      transform 0.5s var(--ease);
+    will-change: transform;
+  }
+  .cg-resources .cta .ring {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+    transition:
+      background 0.4s ease,
+      transform 0.55s var(--ease);
+  }
+  .cg-resources .cta svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.55s var(--ease);
+  }
+  .cg-resources .cta:hover {
+    background: var(--ink);
+  }
+  .cg-resources .cta:hover .ring {
+    background: var(--gold);
+    color: var(--ink);
+    transform: scale(1.08);
+  }
+  .cg-resources .cta:hover svg {
+    transform: rotate(-45deg);
+  }
+  .cg-resources .cta:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+  }
+  .cg-resources .foot {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: clamp(28px, 3vw, 40px);
+    padding-right: 130px;
+  }
+  .cg-resources .dashes {
+    display: flex;
+    gap: 8px;
+  }
+  .cg-resources .dash {
+    position: relative;
+    width: 26px;
+    height: 4px;
+    border-radius: 99px;
+    background: rgba(30, 36, 32, 0.22);
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    transition:
+      width 0.5s var(--ease),
+      background 0.4s ease;
+  }
+  .cg-resources .dash.active {
+    width: 52px;
+    background: rgba(255, 255, 255, 0.55);
+  }
+  .cg-resources .dash.active i {
+    position: absolute;
+    inset: 0;
+    background: var(--green);
+    transform-origin: left center;
+    transform: scaleX(0);
+  }
+  .cg-resources .dash.active i.run {
+    animation: cg-resources-fill var(--dur, 7s) linear forwards;
+  }
+  @keyframes cg-resources-fill {
+    to {
+      transform: scaleX(1);
+    }
+  }
+  .cg-resources .dash:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+  }
+  .cg-resources .count {
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: rgba(30, 36, 32, 0.55);
+  }
+  .cg-resources .count b {
+    color: var(--ink);
+  }
+  .cg-resources .notch {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    background: var(--paper);
+    border-top-left-radius: var(--notch);
+    padding: 10px 0 0 10px;
+    display: flex;
+    gap: 8px;
+  }
+  .cg-resources .notch::before,
+  .cg-resources .notch::after {
+    content: "";
+    position: absolute;
+    width: var(--notch);
+    height: var(--notch);
+    background: radial-gradient(
+      circle at top left,
+      rgba(0, 0, 0, 0) calc(var(--notch) - 0.5px),
+      var(--paper) var(--notch)
+    );
+  }
+  .cg-resources .notch::before {
+    left: calc(-1 * var(--notch));
+    bottom: 0;
+  }
+  .cg-resources .notch::after {
+    right: 0;
+    top: calc(-1 * var(--notch));
+  }
+  .cg-resources .nav {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1.5px solid rgba(30, 36, 32, 0.25);
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    transition:
+      background 0.4s ease,
+      color 0.4s ease,
+      border-color 0.4s ease,
+      transform 0.5s var(--ease);
+  }
+  .cg-resources .nav.next {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: #fff;
+  }
+  .cg-resources .nav svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.5s var(--ease);
+  }
+  .cg-resources .nav:hover {
+    background: var(--green);
+    border-color: var(--green);
+    color: #fff;
+    transform: scale(1.07);
+  }
+  .cg-resources .nav.next:hover svg {
+    transform: rotate(-45deg);
+  }
+  .cg-resources .nav.prev:hover svg {
+    transform: rotate(45deg);
+  }
+  .cg-resources .nav:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+  }
+  .cg-resources .nav:active {
+    transform: scale(0.96);
+  }
+  .cg-resources .cg-resource-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+  }
+  .cg-resources .cg-resource-modal[hidden] {
+    display: none !important;
+  }
+  .cg-resources .modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(22, 60, 47, 0.55);
+    backdrop-filter: blur(4px);
+  }
+  .cg-resources .modal-dialog {
+    position: relative;
+    z-index: 1;
+    width: min(520px, 100%);
+    max-height: min(90vh, 720px);
+    overflow: auto;
+    background: var(--white);
+    border-radius: 28px;
+    padding: 36px 32px 32px;
+    box-shadow: 0 30px 80px rgba(30, 36, 32, 0.28);
+  }
+  .cg-resources .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--sage);
+    color: var(--ink);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  .cg-resources .modal-close svg {
+    width: 16px;
+    height: 16px;
+  }
+  .cg-resources .modal-close:hover {
+    background: var(--gold-bg);
+    transform: scale(1.05);
+  }
+  .cg-resources .modal-eyebrow {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 10px;
+  }
+  .cg-resources .modal-dialog h3 {
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 24px;
+    padding-right: 36px;
+    line-height: 1.2;
+  }
+  .cg-resources .modal-dialog .field {
+    margin-bottom: 18px;
+  }
+  .cg-resources .modal-dialog .two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .cg-resources .modal-dialog label,
+  .cg-resources .modal-dialog legend {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .cg-resources .modal-dialog input[type="text"],
+  .cg-resources .modal-dialog input[type="email"] {
+    width: 100%;
+    border: 1.5px solid rgba(30, 36, 32, 0.16);
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--paper);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .cg-resources .modal-dialog input:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(29, 74, 58, 0.12);
+  }
+  .cg-resources .purchase-type {
+    border: 0;
+  }
+  .cg-resources .purchase-type .radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 18px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    cursor: pointer;
+  }
+  .cg-resources .purchase-type input {
+    accent-color: var(--green);
+    width: 16px;
+    height: 16px;
+  }
+  .cg-resources .org-field[hidden] {
+    display: none !important;
+  }
+  .cg-resources .modal-dialog .submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 8px;
+    padding: 10px 12px 10px 26px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--green);
+    color: #fff;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.4s ease;
+  }
+  .cg-resources .modal-dialog .submit .ring {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+  }
+  .cg-resources .modal-dialog .submit svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.55s var(--ease);
+  }
+  .cg-resources .modal-dialog .submit:hover {
+    background: var(--ink);
+  }
+  .cg-resources .modal-dialog .submit:hover svg {
+    transform: rotate(-45deg);
+  }
+  .cg-resources .modal-dialog .submit:disabled {
+    opacity: 0.65;
+    cursor: wait;
+  }
+  .cg-resources .modal-dialog .status {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 1.2em;
+  }
+  .cg-resources .modal-dialog .status.is-success {
+    color: var(--green);
+  }
+  .cg-resources .modal-dialog .status.is-error {
+    color: #9b3a32;
+  }
+  @media (max-width: 980px) {
+    .cg-resources .wrap {
+      grid-template-columns: 1fr;
+      gap: 44px;
+    }
+    .cg-resources h2 .script {
+      display: inline-block;
+      padding-left: 0.2em;
+    }
+  }
+  @media (max-width: 640px) {
+    .cg-resources .stage {
+      border-top-left-radius: 70px;
+    }
+    .cg-resources .slide {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+    .cg-resources .cover {
+      width: min(220px, 70%);
+    }
+    .cg-resources .copy .desc {
+      max-width: none;
+    }
+    .cg-resources .foot {
+      padding-right: 0;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+      justify-content: center;
+    }
+    .cg-resources .modal-dialog .two {
+      grid-template-columns: 1fr;
+    }
+    .cg-resources .modal-dialog {
+      padding: 28px 20px 24px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cg-resources * {
+      transition: none !important;
+      animation: none !important;
+    }
+    .cg-resources .eyebrow,
+    .cg-resources .lead .note,
+    .cg-resources .stage {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    .cg-resources h2 .w > span {
+      transform: none !important;
+    }
+  }
+  .Content_Content__Pm8xD:has(.cg-expertise) {
     display: block;
     margin: 0;
     padding: 0;
@@ -4041,9 +4724,11 @@ var voicesHtml = "<section class=\"cg-voices\"><div class=\"wrap\" data-reveal><
         initVoicesSection();
         return;
       }
+      var resourcesEl = document.querySelector(".cg-resources");
       var programEl = document.querySelector(".cg-program");
-      var programBlock = programEl
-        ? programEl.closest(".Content_Content__Pm8xD")
+      var anchorEl = resourcesEl || programEl;
+      var anchorBlock = anchorEl
+        ? anchorEl.closest(".Content_Content__Pm8xD")
         : null;
       var template = document.createElement("template");
       template.innerHTML =
@@ -4054,9 +4739,368 @@ var voicesHtml = "<section class=\"cg-voices\"><div class=\"wrap\" data-reveal><
         voicesHtml +
         "</div></div></section>";
       var block = template.content.firstChild;
+      if (anchorBlock && anchorBlock.parentElement) {
+        anchorBlock.insertAdjacentElement("afterend", block);
+        initVoicesSection();
+      }
+    }
+
+var resourcesHtml = "<section class=\"cg-resources\"><div class=\"wrap\" data-reveal><span class=\"blob a\" data-parallax=\"0.05\"></span><span class=\"blob b\" data-parallax=\"-0.04\"></span><div class=\"lead\"><p class=\"eyebrow\">Resources</p><h2 aria-label=\"Tools for Healing & Growth\"><span class=\"w\"><span>Tools for</span></span><span class=\"w\"><span>Healing</span></span><span class=\"w\"><span class=\"script\">&amp; Growth</span></span></h2><p class=\"note\"> Workbooks, guides, and journals to support healing, leadership, and survivor-centered care. </p></div><div class=\"stage\" role=\"region\" aria-roledescription=\"carousel\" aria-label=\"Resources\"><div class=\"slides\" aria-live=\"polite\"><div class=\"slide active\" style=\"--i: 0\"><figure class=\"cover\"><img src=\"/media/resource-refresh\" alt=\"Refresh — Personal Growth &amp; Empowerment book cover\" /></figure><div class=\"copy\"><h3>Refresh</h3><p class=\"sub\">Personal Growth &amp; Empowerment</p><p class=\"desc\"> A guided workbook for renewal, self-reflection, and empowered next steps in life and leadership. </p><a class=\"cta\" href=\"https://www.amazon.com/Refresh-Personal-Empowerment-Carrie-Grace/dp/B0BZFLQNYY\" target=\"_blank\" rel=\"noopener noreferrer\" data-magnetic > Get Resource <span class=\"ring\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M4 12h15m0 0-6-6m6 6-6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg></span></a></div></div><div class=\"slide\" style=\"--i: 1\"><figure class=\"cover\"><img src=\"/media/resource-resilient\" alt=\"Resilient — A Compassionate Response to Trauma book cover\" /></figure><div class=\"copy\"><h3>Resilient</h3><p class=\"sub\">A Compassionate Response to Trauma</p><p class=\"desc\"> Practical guidance for responding to trauma with compassion, care, and trauma-informed practice. </p><button class=\"cta\" type=\"button\" data-inquiry=\"resilient\" data-resource-title=\"Resilient — A Compassionate Response to Trauma\" data-magnetic > Get Resource <span class=\"ring\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M4 12h15m0 0-6-6m6 6-6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg></span></button></div></div><div class=\"slide\" style=\"--i: 2\"><figure class=\"cover\"><img src=\"/media/resource-rest\" alt=\"Rest — Survivor Stabilization &amp; Safe House Guide book cover\" /></figure><div class=\"copy\"><h3>Rest</h3><p class=\"sub\">Survivor Stabilization &amp; Safe House Guide</p><p class=\"desc\"> A field guide for stabilizing survivors and building safe, survivor-centered house programs. </p><button class=\"cta\" type=\"button\" data-inquiry=\"rest\" data-resource-title=\"Rest — Survivor Stabilization &amp; Safe House Guide\" data-magnetic > Get Resource <span class=\"ring\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M4 12h15m0 0-6-6m6 6-6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg></span></button></div></div><div class=\"slide\" style=\"--i: 3\"><figure class=\"cover\"><img src=\"/media/resource-reimagine\" alt=\"Reimagine Dreams &amp; Visions — Guided Journal cover\" /></figure><div class=\"copy\"><h3>Reimagine Dreams &amp; Visions</h3><p class=\"sub\">A Dreams &amp; Visions Guided Journal</p><p class=\"desc\"> A guided journal for exploring dreams and visions with structure, reflection, and spiritual insight. </p><a class=\"cta\" href=\"https://www.amazon.com/Reimagine-Dreams-Visions-Guided-Journal/dp/B0D3BNV36B\" target=\"_blank\" rel=\"noopener noreferrer\" data-magnetic > Get Resource <span class=\"ring\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M4 12h15m0 0-6-6m6 6-6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg></span></a></div></div></div><div class=\"foot\"><div class=\"dashes\" role=\"tablist\" aria-label=\"Choose resource\"></div><p class=\"count\"><b>01</b> / 04</p></div><span class=\"notch\"><button class=\"nav prev\" type=\"button\" aria-label=\"Previous resource\"><svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M20 12H5m0 0 6-6m-6 6 6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg></button><button class=\"nav next\" type=\"button\" aria-label=\"Next resource\"><svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M4 12h15m0 0-6-6m6 6-6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg></button></span></div></div><div class=\"cg-resource-modal\" id=\"cg-resource-modal\" hidden aria-hidden=\"true\"><div class=\"modal-backdrop\" data-close-modal></div><div class=\"modal-dialog\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"cg-resource-modal-title\"><button class=\"modal-close\" type=\"button\" data-close-modal aria-label=\"Close\"><svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 6l12 12M18 6 6 18\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg></button><p class=\"modal-eyebrow\">Resource Inquiry</p><h3 id=\"cg-resource-modal-title\">Request Resource</h3><form id=\"cg-resource-inquiry-form\" novalidate><input type=\"hidden\" name=\"resource\" id=\"cg-resource-name\" value=\"\" /><div class=\"two\"><div class=\"field\"><label for=\"cg-resource-first\">First name</label><input id=\"cg-resource-first\" name=\"firstName\" type=\"text\" autocomplete=\"given-name\" required /></div><div class=\"field\"><label for=\"cg-resource-last\">Last name</label><input id=\"cg-resource-last\" name=\"lastName\" type=\"text\" autocomplete=\"family-name\" required /></div></div><div class=\"field\"><label for=\"cg-resource-email\">Email</label><input id=\"cg-resource-email\" name=\"email\" type=\"email\" autocomplete=\"email\" required /></div><fieldset class=\"field purchase-type\"><legend>Are you wanting to purchase as an individual or organization?</legend><label class=\"radio\"><input type=\"radio\" name=\"purchaseType\" value=\"individual\" checked /> Individual</label><label class=\"radio\"><input type=\"radio\" name=\"purchaseType\" value=\"organization\" /> Organization</label></fieldset><div class=\"field org-field\" id=\"cg-resource-org-field\" hidden><label for=\"cg-resource-org\">Organization name</label><input id=\"cg-resource-org\" name=\"organization\" type=\"text\" autocomplete=\"organization\" /></div><button class=\"submit\" type=\"submit\"> Send Inquiry <span class=\"ring\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M4 12h15m0 0-6-6m6 6-6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg></span></button><p class=\"status\" id=\"cg-resource-status\" role=\"status\" aria-live=\"polite\"></p></form></div></div></section>";
+
+    function initResourcesSection() {
+      var root = document.querySelector(".cg-resources");
+      if (!root || root.dataset.resourcesInit) return;
+      root.dataset.resourcesInit = "1";
+
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var wrap = root.querySelector("[data-reveal]");
+      var stage = root.querySelector(".stage");
+      var slides = Array.prototype.slice.call(root.querySelectorAll(".slide"));
+      var slidesBox = root.querySelector(".slides");
+      var dashBox = root.querySelector(".dashes");
+      var countEl = root.querySelector(".count");
+      var DUR = 7000;
+      var idx = 0;
+      var timer = null;
+      var hovering = false;
+      var startX = null;
+      var accentMap = ["#eef2ee", "#dfb1a8", "#f5ead7", "#d9ebe3"];
+
+      if (!wrap || !stage || !slides.length || !slidesBox || !dashBox || !countEl) {
+        return;
+      }
+
+      function setStageAccent(i) {
+        stage.style.setProperty("--slide-bg", accentMap[i] || accentMap[0]);
+      }
+
+      function sizeSlides() {
+        var h = 0;
+        slides.forEach(function (s) {
+          var wasActive = s.classList.contains("active");
+          s.classList.add("active");
+          h = Math.max(h, s.offsetHeight);
+          if (!wasActive) s.classList.remove("active");
+        });
+        slidesBox.style.minHeight = h + "px";
+      }
+      sizeSlides();
+      window.addEventListener("resize", sizeSlides);
+
+      function renderDashes() {
+        dashBox.innerHTML = "";
+        slides.forEach(function (_, i) {
+          var d = document.createElement("button");
+          d.type = "button";
+          d.className = "dash" + (i === idx ? " active" : "");
+          d.setAttribute("role", "tab");
+          d.setAttribute("aria-label", "Resource " + (i + 1));
+          d.setAttribute("aria-selected", i === idx ? "true" : "false");
+          if (i === idx && !reduce) {
+            var f = document.createElement("i");
+            f.style.setProperty("--dur", DUR + "ms");
+            d.appendChild(f);
+            requestAnimationFrame(function () {
+              requestAnimationFrame(function () {
+                f.classList.add("run");
+              });
+            });
+          }
+          d.addEventListener("click", function () {
+            go(i, true);
+          });
+          dashBox.appendChild(d);
+        });
+      }
+
+      function go(n, manual) {
+        idx = (n + slides.length) % slides.length;
+        slides.forEach(function (s, i) {
+          s.classList.toggle("active", i === idx);
+        });
+        setStageAccent(idx);
+        countEl.innerHTML =
+          "<b>0" + (idx + 1) + "</b> / 0" + slides.length;
+        renderDashes();
+        if (manual) restart();
+      }
+
+      function tick() {
+        if (!hovering && !document.hidden) go(idx + 1);
+        else renderDashes();
+      }
+      function restart() {
+        if (timer) clearInterval(timer);
+        if (!reduce) timer = setInterval(tick, DUR);
+      }
+
+      stage.addEventListener("mouseenter", function () {
+        hovering = true;
+      });
+      stage.addEventListener("mouseleave", function () {
+        hovering = false;
+      });
+
+      var nextBtn = root.querySelector(".nav.next");
+      var prevBtn = root.querySelector(".nav.prev");
+      if (nextBtn) {
+        nextBtn.addEventListener("click", function () {
+          go(idx + 1, true);
+        });
+      }
+      if (prevBtn) {
+        prevBtn.addEventListener("click", function () {
+          go(idx - 1, true);
+        });
+      }
+
+      stage.setAttribute("tabindex", "0");
+      stage.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight") go(idx + 1, true);
+        if (e.key === "ArrowLeft") go(idx - 1, true);
+      });
+
+      stage.addEventListener("pointerdown", function (e) {
+        if (e.target.closest("button, a")) return;
+        startX = e.clientX;
+      });
+      window.addEventListener("pointerup", function (e) {
+        if (startX === null) return;
+        var dx = e.clientX - startX;
+        if (Math.abs(dx) > 40) go(idx + (dx < 0 ? 1 : -1), true);
+        startX = null;
+      });
+
+      setStageAccent(0);
+
+      if (!("IntersectionObserver" in window) || reduce) {
+        wrap.classList.add("in");
+        renderDashes();
+        restart();
+      } else {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (en) {
+              if (en.isIntersecting) {
+                en.target.classList.add("in");
+                renderDashes();
+                restart();
+                io.unobserve(en.target);
+              }
+            });
+          },
+          { threshold: 0.2 },
+        );
+        io.observe(wrap);
+      }
+      if (reduce) renderDashes();
+
+      if (!reduce) {
+        var layers = root.querySelectorAll("[data-parallax]");
+        var ticking = false;
+        window.addEventListener(
+          "scroll",
+          function () {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(function () {
+              var r = root.getBoundingClientRect();
+              var prog = -r.top;
+              layers.forEach(function (el) {
+                var s = parseFloat(el.getAttribute("data-parallax")) || 0;
+                el.style.transform = "translateY(" + prog * s + "px)";
+              });
+              ticking = false;
+            });
+          },
+          { passive: true },
+        );
+      }
+
+      initResourceInquiryModal(root);
+    }
+
+    function initResourceInquiryModal(root) {
+      var modal = root.querySelector("#cg-resource-modal");
+      var form = root.querySelector("#cg-resource-inquiry-form");
+      var status = root.querySelector("#cg-resource-status");
+      var titleEl = root.querySelector("#cg-resource-modal-title");
+      var resourceInput = root.querySelector("#cg-resource-name");
+      var orgField = root.querySelector("#cg-resource-org-field");
+      var orgInput = root.querySelector("#cg-resource-org");
+      var FORMSUBMIT_URL =
+        "https://formsubmit.co/ajax/" +
+        encodeURIComponent("carrie@carriegraceconsulting.com");
+      var lastFocus = null;
+
+      if (!modal || !form || !status || !titleEl || !resourceInput) return;
+
+      function syncOrgVisibility() {
+        var orgRadio = form.querySelector(
+          'input[name="purchaseType"][value="organization"]',
+        );
+        var isOrg = orgRadio && orgRadio.checked;
+        if (orgField) {
+          if (isOrg) orgField.removeAttribute("hidden");
+          else orgField.setAttribute("hidden", "");
+        }
+        if (orgInput) {
+          orgInput.required = !!isOrg;
+          if (!isOrg) orgInput.value = "";
+        }
+      }
+
+      function openModal(resourceTitle) {
+        lastFocus = document.activeElement;
+        resourceInput.value = resourceTitle || "";
+        titleEl.textContent = "Request " + (resourceTitle || "Resource");
+        status.textContent = "";
+        status.className = "status";
+        form.reset();
+        resourceInput.value = resourceTitle || "";
+        syncOrgVisibility();
+        modal.removeAttribute("hidden");
+        modal.setAttribute("aria-hidden", "false");
+        document.documentElement.style.overflow = "hidden";
+        var first = form.querySelector("#cg-resource-first");
+        if (first) first.focus();
+      }
+
+      function closeModal() {
+        modal.setAttribute("hidden", "");
+        modal.setAttribute("aria-hidden", "true");
+        document.documentElement.style.overflow = "";
+        if (lastFocus && typeof lastFocus.focus === "function") {
+          lastFocus.focus();
+        }
+      }
+
+      root.querySelectorAll("[data-inquiry]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          openModal(btn.getAttribute("data-resource-title") || "Resource");
+        });
+      });
+
+      modal.querySelectorAll("[data-close-modal]").forEach(function (el) {
+        el.addEventListener("click", closeModal);
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !modal.hasAttribute("hidden")) {
+          closeModal();
+        }
+      });
+
+      form.querySelectorAll('input[name="purchaseType"]').forEach(function (radio) {
+        radio.addEventListener("change", syncOrgVisibility);
+      });
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var submitBtn = form.querySelector(".submit");
+        var first = form.querySelector("#cg-resource-first");
+        var last = form.querySelector("#cg-resource-last");
+        var email = form.querySelector("#cg-resource-email");
+        var purchaseType = form.querySelector(
+          'input[name="purchaseType"]:checked',
+        );
+
+        status.textContent = "";
+        status.className = "status";
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.setAttribute("aria-busy", "true");
+        }
+
+        var resourceTitle = resourceInput.value.trim();
+        var fullName =
+          (first ? first.value.trim() : "") +
+          " " +
+          (last ? last.value.trim() : "");
+
+        fetch(FORMSUBMIT_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            resource: resourceTitle,
+            firstName: first ? first.value.trim() : "",
+            lastName: last ? last.value.trim() : "",
+            name: fullName.trim(),
+            email: email ? email.value.trim() : "",
+            purchaseType: purchaseType ? purchaseType.value : "",
+            organization: orgInput ? orgInput.value.trim() : "",
+            _replyto: email ? email.value.trim() : "",
+            _subject: "Resource inquiry: " + resourceTitle,
+            _template: "table",
+            _captcha: "false",
+          }),
+        })
+          .then(function (response) {
+            return response.json().then(function (data) {
+              return { ok: response.ok, data: data };
+            });
+          })
+          .then(function (result) {
+            if (result.ok && result.data && result.data.success === "true") {
+              status.textContent =
+                "Thank you — your inquiry has been sent. We'll be in touch soon.";
+              status.classList.add("is-success");
+              form.reset();
+              resourceInput.value = resourceTitle;
+              syncOrgVisibility();
+              setTimeout(closeModal, 1800);
+              return;
+            }
+            status.textContent =
+              (result.data && result.data.message) ||
+              "Something went wrong. Please try again or email us directly.";
+            status.classList.add("is-error");
+          })
+          .catch(function () {
+            status.textContent =
+              "Something went wrong. Please try again or email us directly.";
+            status.classList.add("is-error");
+          })
+          .finally(function () {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.removeAttribute("aria-busy");
+            }
+          });
+      });
+    }
+
+    function ensureResourcesSection() {
+      var resources = document.querySelector(".cg-resources");
+      if (resources && resources.querySelector(".stage")) {
+        initResourcesSection();
+        return;
+      }
+      var programEl = document.querySelector(".cg-program");
+      var programBlock = programEl
+        ? programEl.closest(".Content_Content__Pm8xD")
+        : null;
+      var template = document.createElement("template");
+      template.innerHTML =
+        '<section class="Content_Content__Pm8xD">' +
+        '<div class="container Content_Cont__FZxhO">' +
+        "<h2></h2>" +
+        '<div class="Content_Copy__Ie90_">' +
+        resourcesHtml +
+        "</div></div></section>";
+      var block = template.content.firstChild;
       if (programBlock && programBlock.parentElement) {
         programBlock.insertAdjacentElement("afterend", block);
-        initVoicesSection();
+        initResourcesSection();
       }
     }
 
@@ -4808,6 +5852,7 @@ var processHtml = "<section class=\"cg-process\" id=\"process\"><div class=\"wra
         ensureAboutSection();
         ensureOfferSection();
         ensureProgramSection();
+        ensureResourcesSection();
         ensureVoicesSection();
         ensureExpertiseSection();
         ensureProcessSection();

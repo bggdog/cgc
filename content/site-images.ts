@@ -11,6 +11,12 @@ export const SITE_IMAGE_FILES = {
     "Organizational structure and setup image.JPG",
   "team-building-retreats": "Team building retreats image.JPG",
   "team-development-care": "team development and care image.JPG",
+  "resource-refresh": "Refresh - Personal Growth & Empowerment.JPG",
+  "resource-resilient":
+    "Resilient - A Compassionate Response to Trauma.JPG",
+  "resource-rest": "Rest - Survivor Stabilization & Safe House Guide.JPG",
+  "resource-reimagine":
+    "Reimagine Dreams & Visions - A Dreams & Visions Guided Journal.jpg",
 } as const;
 
 export type SiteImageKey = keyof typeof SITE_IMAGE_FILES;
