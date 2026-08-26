@@ -66,7 +66,15 @@
   animation:cg-drift 26s ease-in-out infinite alternate;
   will-change:transform;
 }
-video.vid{ object-fit:cover; width:112%; height:112%; animation:none; }
+img.vid,
+video.vid{
+  object-fit:cover;
+  width:112%;
+  height:112%;
+  background:none;
+}
+video.vid{ animation:none; }
+img.vid{ animation:cg-drift 26s ease-in-out infinite alternate; }
 @keyframes cg-drift{
   0%{ transform:translate(0,0) scale(1); }
   100%{ transform:translate(-2.5%, -2%) scale(1.06); }
@@ -85,26 +93,6 @@ video.vid{ object-fit:cover; width:112%; height:112%; animation:none; }
   pointer-events:none;
 }
 .cg-zt .stage.lit .glow{ opacity:1; }
-
-/* film placeholder chip */
-.cg-zt .film-tag{
-  position:absolute; top:clamp(20px, 2.6vw, 40px); right:clamp(20px, 2.6vw, 40px);
-  display:inline-flex; align-items:center; gap:10px;
-  font-size:11px; font-weight:600;
-  letter-spacing:.18em; text-transform:uppercase;
-  color:rgba(255,255,255,.75);
-  border:1.5px dashed rgba(255,255,255,.35);
-  border-radius:999px;
-  padding:10px 18px;
-  z-index:3;
-}
-.cg-zt .film-tag .play{
-  width:22px; height:22px;
-  display:grid; place-items:center;
-  border-radius:50%;
-  background:rgba(255,255,255,.15);
-}
-.cg-zt .film-tag svg{ width:9px; height:9px; }
 
 /* rotating seal */
 .cg-zt .seal{

@@ -127,14 +127,14 @@
   transition-delay:0s;
 }
 
-/* spans — two balanced rows + a wide finale */
-.cg-about .t1{ grid-column:span 5; grid-row:span 2; border-top-left-radius:110px; }
-.cg-about .t2{ grid-column:span 4; }
-.cg-about .t3{ grid-column:span 3; }
-.cg-about .t4{ grid-column:span 3; }
-.cg-about .t5{ grid-column:span 4; border-bottom-right-radius:90px; }
-.cg-about .t6{ grid-column:span 4; border-bottom-left-radius:90px; }
-.cg-about .t7{ grid-column:span 8; border-top-right-radius:110px; }
+/* Portrait column + mid photos + a taller bottom pair */
+.cg-about .t1{ grid-column: 1 / span 5; grid-row: 1 / span 3; border-top-left-radius:110px; }
+.cg-about .t2{ grid-column: 6 / span 4; grid-row: 1; }
+.cg-about .t3{ grid-column: 10 / span 3; grid-row: 1; }
+.cg-about .t4{ grid-column: 6 / span 3; grid-row: 2 / span 2; }
+.cg-about .t5{ grid-column: 9 / span 4; grid-row: 2 / span 2; border-bottom-right-radius:90px; }
+.cg-about .t6{ grid-column: 1 / span 4; grid-row: 4 / span 2; border-bottom-left-radius:90px; }
+.cg-about .t7{ grid-column: 5 / span 8; grid-row: 4 / span 2; border-top-right-radius:110px; }
 .cg-about .t1:hover{ border-top-left-radius:var(--r); }
 .cg-about .t5:hover{ border-bottom-right-radius:var(--r); }
 .cg-about .t6:hover{ border-bottom-left-radius:var(--r); }
@@ -171,6 +171,12 @@
   position:absolute; inset:0; width:100%; height:100%;
   object-fit:cover;
   transition:transform 1.2s var(--ease);
+}
+.cg-about .t5 img.real,
+.cg-about .t6 img.real,
+.cg-about .t7 img.real{
+  object-position: 50% 22%;
+  transform-origin: 50% 22%;
 }
 .cg-about .tile:hover img.real{ transform:scale(1.05); }
 
@@ -326,19 +332,29 @@
    RESPONSIVE / MOTION
 ================================================== */
 @media (max-width: 900px){
-  .cg-about .t1{ grid-column:span 6; }
+  .cg-about .t1,
+  .cg-about .t2,
+  .cg-about .t3,
+  .cg-about .t4,
+  .cg-about .t5,
+  .cg-about .t6,
+  .cg-about .t7{ grid-column: auto; grid-row: auto; }
+  .cg-about .t1{ grid-column:span 6; grid-row: span 2; }
   .cg-about .t2{ grid-column:span 6; }
   .cg-about .t3{ grid-column:span 6; }
   .cg-about .t4{ grid-column:span 6; }
-  .cg-about .t5{ grid-column:span 6; }
-  .cg-about .t6{ grid-column:span 6; }
-  .cg-about .t7{ grid-column:span 12; }
+  .cg-about .t5{ grid-column:span 6; grid-row: span 2; }
+  .cg-about .t6{ grid-column:span 6; grid-row: span 2; }
+  .cg-about .t7{ grid-column:span 12; grid-row: span 2; }
   .cg-about .panel .inner{ grid-template-columns:1fr; }
 }
 @media (max-width: 560px){
   .cg-about .t1, .cg-about .t2, .cg-about .t3, .cg-about .t4,
-  .cg-about .t5, .cg-about .t6, .cg-about .t7{ grid-column:span 12; }
-  .cg-about .t1{ grid-row:span 2; }
+  .cg-about .t5, .cg-about .t6, .cg-about .t7{ grid-column:span 12; grid-row: auto; }
+  .cg-about .t1,
+  .cg-about .t5,
+  .cg-about .t6,
+  .cg-about .t7{ grid-row:span 2; }
   .cg-about .hero{ text-align:left; }
   .cg-about .lede{ margin:0; }
   .cg-about .pills{ justify-content:flex-start; }

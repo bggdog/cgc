@@ -1,6 +1,7 @@
 import { readFileSync } from "fs";
 import path from "path";
 import { assembleHeader } from "./assemble-header";
+import { INSTAGRAM_URL, LINKEDIN_URL } from "./site-links";
 
 const contentDir = path.join(process.cwd(), "content", "contact");
 
@@ -57,8 +58,8 @@ ${header.markup}
         <div>
           <h4>Follow</h4>
           <div class="socials">
-            <a href="#" aria-label="LinkedIn">${linkedInIcon}</a>
-            <a href="#" aria-label="Instagram">${instagramIcon}</a>
+            <a href="${LINKEDIN_URL}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">${linkedInIcon}</a>
+            <a href="${INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">${instagramIcon}</a>
           </div>
         </div>
       </div>

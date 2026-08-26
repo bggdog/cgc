@@ -141,14 +141,18 @@ ${header.markup}
   </section>
 
   <!-- ============ WIDE IMAGE ============ -->
-  <section class="wide" data-reveal>
+  ${
+    service.showWideSection !== false
+      ? `<section class="wide" data-reveal>
     <div class="wrap">
       <div class="frame">
         ${renderFrameMedia(service.wideImage, "Wide Service Imagery")}
-        <span class="notch"><span class="tag">${escapeHtml(service.wideTag)}</span></span>
+        ${service.wideTag ? `<span class="notch"><span class="tag">${escapeHtml(service.wideTag)}</span></span>` : ""}
       </div>
     </div>
-  </section>
+  </section>`
+      : ""
+  }
 
   <!-- ============ CLOSING CTA ============ -->
   <section class="close">

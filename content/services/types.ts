@@ -32,8 +32,10 @@ export type ServicePageContent = {
   bandHeadingAfter: string;
   bandSub: string;
   includes: ServiceInclude[];
-  wideTag: string;
+  wideTag?: string;
   wideImage?: ServiceImage;
+  /** When false, the wide image band is omitted. Defaults to true. */
+  showWideSection?: boolean;
   closeHeadingWords: ServiceTitleWord[];
   closeHeadingAriaLabel: string;
   closeSub: string;

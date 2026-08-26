@@ -1,15 +1,11 @@
-import { boardConsulting } from "./board-consulting";
 import { executiveConsulting } from "./executive-consulting";
 import { organizationalStructureSetup } from "./organizational-structure-setup";
-import { teamBuildingRetreats } from "./team-building-retreats";
 import { teamDevelopmentCare } from "./team-development-care";
 import type { ServicePageContent } from "./types";
 
 const services: ServicePageContent[] = [
   executiveConsulting,
-  boardConsulting,
   teamDevelopmentCare,
-  teamBuildingRetreats,
   organizationalStructureSetup,
 ];
 

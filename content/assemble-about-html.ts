@@ -1,18 +1,14 @@
 import { readFileSync } from "fs";
 import path from "path";
 import { assembleHeader } from "./assemble-header";
+import { siteImageSrc } from "./site-images";
 
 const contentDir = path.join(process.cwd(), "content", "about");
 
-const cameraIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="3"/><circle cx="12" cy="12.5" r="3.4"/><path d="M8.5 5 10 3h4l1.5 2"/></svg>`;
-
 const arrowIcon = `<svg viewBox="0 0 24 24" fill="none"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
-function photoPlaceholder(label: string): string {
-  return `<div class="ph"><div class="tip">
-            <span class="ic">${cameraIcon}</span>
-            <p>${label}</p>
-          </div></div>`;
+function photo(src: string, alt: string): string {
+  return `<img class="real" src="${src}" alt="${alt}" />`;
 }
 
 export function assembleAboutHtml(): string {
@@ -65,18 +61,18 @@ ${header.markup}
       <div class="bento">
 
         <div class="tile t1" style="--i:0">
-          ${photoPlaceholder("Portrait")}
+          ${photo(siteImageSrc("about-1"), "Carrie Grace")}
           <span class="notch"><span class="tag">Carrie Grace</span></span>
         </div>
 
         <div class="tile t2" style="--i:1">
-          ${photoPlaceholder("Speaking")}
+          ${photo(siteImageSrc("about-2"), "Carrie Grace")}
         </div>
 
-        <div class="tile t3 accent" style="--i:2" aria-label="First to implement a safehouse model in the US">
+        <div class="tile t3 accent" style="--i:2" aria-label="First to implement emergency housing in Texas">
           <div class="first">
             <b>1st</b>
-            <span>To implement a safehouse model in the US</span>
+            <span>To implement emergency housing in Texas</span>
             <span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
           </div>
         </div>
@@ -88,16 +84,15 @@ ${header.markup}
         </div>
 
         <div class="tile t5" style="--i:4">
-          ${photoPlaceholder("With Teams")}
+          ${photo(siteImageSrc("about-3"), "Carrie Grace with teams")}
         </div>
 
         <div class="tile t6" style="--i:5">
-          ${photoPlaceholder("In the Field")}
+          ${photo(siteImageSrc("about-4"), "Carrie Grace in the field")}
         </div>
 
         <div class="tile t7" style="--i:6">
-          ${photoPlaceholder("Retreats &amp; Workshops")}
-          <span class="notch"><span class="tag">The Work in Motion</span></span>
+          ${photo(siteImageSrc("about-5"), "Retreats and workshops")}
         </div>
 
       </div>

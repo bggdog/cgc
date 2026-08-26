@@ -1,5 +1,6 @@
 import { readFileSync } from "fs";
 import path from "path";
+import { INSTAGRAM_URL, LINKEDIN_URL } from "./site-links";
 
 const contentDir = path.join(process.cwd(), "content", "header");
 
@@ -31,9 +32,7 @@ const cornerSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
 
 const services = [
   { label: "Executive Consulting", href: "/services/executive-consulting" },
-  { label: "Board Consulting", href: "/services/board-consulting" },
   { label: "Team Development &amp; Care", href: "/services/team-development-care" },
-  { label: "Team Building Retreats", href: "/services/team-building-retreats" },
   {
     label: "Organizational Structure &amp; Setup",
     href: "/services/organizational-structure-setup",
@@ -56,8 +55,9 @@ function link(href: string, label: string, currentPath: string): string {
 }
 
 function socialIcon(label: string, pathD: string): string {
+  const href = label === "linkedin" ? LINKEDIN_URL : INSTAGRAM_URL;
   return `<li class="social">
-                <a href="#" aria-label="${label}"
+                <a href="${href}" target="_blank" rel="noopener noreferrer" aria-label="${label}"
                   ><svg
                     role="img"
                     viewBox="0 0 24 24"

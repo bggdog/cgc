@@ -1,4 +1,5 @@
 import type { ServicePageContent } from "./types";
+import { siteImageSrc } from "../site-images";
 
 export const organizationalStructureSetup: ServicePageContent = {
   slug: "organizational-structure-setup",
@@ -12,6 +13,10 @@ export const organizationalStructureSetup: ServicePageContent = {
   lede: "Whether you're scaling, restructuring, or launching, we help you build an org chart and operational framework that serves your people and your mission.",
   chips: ["Scaling & Launch", "Ops Framework", "People-Centered"],
   frameTag: "Org Structure",
+  heroImage: {
+    src: siteImageSrc("organizational-structure-setup"),
+    alt: "Organizational structure and setup",
+  },
   bandHeadingBefore: "Structure that",
   bandHeadingScript: "serves",
   bandHeadingAfter: "people",
@@ -20,11 +25,11 @@ export const organizationalStructureSetup: ServicePageContent = {
   includes: [
     {
       title: "Org Chart & Role Design",
-      body: "Clear reporting lines, role definitions, and spans of care so people know how they fit and who they support.",
+      body: "Clear mission, role clarity, reporting lines, so people know how they fit and who they support.",
     },
     {
       title: "Operational Frameworks",
-      body: "Decision rights, workflows, and systems that keep the mission moving without bottlenecks or burnout.",
+      body: "Actionable strategies, techniques, workflows, and systems that keep the mission moving without bottlenecks or burnout with long term sustainability.",
     },
     {
       title: "Growth & Restructuring Support",
@@ -36,6 +41,7 @@ export const organizationalStructureSetup: ServicePageContent = {
     },
   ],
   wideTag: "By Design",
+  showWideSection: false,
   closeHeadingWords: [
     { text: "Ready" },
     { text: "to" },

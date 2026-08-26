@@ -1,6 +1,7 @@
 import { readFileSync } from "fs";
 import path from "path";
 import { assembleHeader } from "./assemble-header";
+import { siteImageSrc } from "./site-images";
 
 const contentDir = path.join(process.cwd(), "content", "zero-turnover");
 
@@ -34,15 +35,9 @@ ${header.markup}
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="stage" data-reveal>
-      <!-- EDIT: replace with <video class="vid" autoplay muted loop playsinline poster="..."><source src="..." type="video/mp4"/></video> -->
-      <div class="vid" aria-hidden="true"></div>
+      <img class="vid" src="${siteImageSrc("team-development-care")}" alt="" aria-hidden="true" />
       <div class="scrim" aria-hidden="true"></div>
       <div class="glow" aria-hidden="true"></div>
-
-      <span class="film-tag" aria-hidden="true">
-        <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-        Program Film Placeholder
-      </span>
 
       <span class="seal" aria-hidden="true">
         <span class="disc"><span>ZT</span></span>
@@ -98,7 +93,7 @@ ${header.markup}
         </div>
         <div class="stat" style="--i:2">
           <div class="num">1<span class="u">st</span></div>
-          <p>to implement a safehouse model in the US</p>
+          <p>to implement emergency housing in Texas</p>
           <span class="rule"></span>
         </div>
       </div>
