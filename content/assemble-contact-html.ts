@@ -1,7 +1,12 @@
 import { readFileSync } from "fs";
 import path from "path";
 import { assembleHeader } from "./assemble-header";
-import { INSTAGRAM_URL, LINKEDIN_URL } from "./site-links";
+import {
+  CONTACT_EMAIL,
+  CONTACT_MAILTO,
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+} from "./site-links";
 
 const contentDir = path.join(process.cwd(), "content", "contact");
 
@@ -49,7 +54,7 @@ ${header.markup}
       <div class="meta">
         <div>
           <h4>Email</h4>
-          <a class="email" href="mailto:hello@carriegrace.consulting">hello@carriegrace.consulting</a>
+          <a class="email" href="${CONTACT_MAILTO}">${CONTACT_EMAIL}</a>
         </div>
         <div>
           <h4>Based</h4>
@@ -65,7 +70,7 @@ ${header.markup}
       </div>
     </div>
 
-    <form class="card" action="mailto:hello@carriegrace.consulting" method="post">
+    <form class="card" id="cg-contact-form" novalidate>
       <div class="two">
         <div class="field">
           <label for="cg-name">Name</label>
@@ -88,6 +93,7 @@ ${header.markup}
         Send Message
         <span class="ring">${arrowIcon}</span>
       </button>
+      <p class="status" id="cg-contact-status" role="status" aria-live="polite"></p>
       <p class="fine">We typically respond within two business days.</p>
     </form>
 
