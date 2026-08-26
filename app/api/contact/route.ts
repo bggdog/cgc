@@ -34,6 +34,11 @@ export async function POST(request: Request) {
   }
 
   try {
+    const origin =
+      request.headers.get("origin") ??
+      request.headers.get("referer") ??
+      "https://cgc-ten.vercel.app";
+
     const response = await fetch(
       `https://formsubmit.co/ajax/${encodeURIComponent(CONTACT_EMAIL)}`,
       {
@@ -41,6 +46,8 @@ export async function POST(request: Request) {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
+          Origin: origin,
+          Referer: origin.endsWith("/") ? origin : `${origin}/`,
         },
         body: JSON.stringify({
           name,
