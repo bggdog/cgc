@@ -72,22 +72,6 @@
           return;
         }
 
-        if (result.data && result.data.error === "Email delivery is not configured yet.") {
-          var subject = encodeURIComponent("Contact form message from " + name.value.trim());
-          var body = encodeURIComponent(
-            "Name: " + name.value.trim() +
-              "\nEmail: " + email.value.trim() +
-              (organization && organization.value.trim()
-                ? "\nOrganization: " + organization.value.trim()
-                : "") +
-              "\n\n" +
-              message.value.trim()
-          );
-          window.location.href =
-            "mailto:carrie@carriegraceconsulting.com?subject=" + subject + "&body=" + body;
-          return;
-        }
-
         status.textContent =
           result.data && result.data.error
             ? result.data.error

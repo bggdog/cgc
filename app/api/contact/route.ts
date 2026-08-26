@@ -1,5 +1,4 @@
 import { CONTACT_EMAIL } from "@/content/site-links";
-import { Resend } from "resend";
 
 type ContactPayload = {
   name?: string;
@@ -34,41 +33,41 @@ export async function POST(request: Request) {
     });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    return Response.json(
-      { error: "Email delivery is not configured yet." },
-      { status: 503 }
-    );
-  }
-
-  const from =
-    process.env.CONTACT_FROM_EMAIL ??
-    "Carrie Grace Website <onboarding@resend.dev>";
-
-  const resend = new Resend(apiKey);
-
-  const text = [
-    `Name: ${name}`,
-    `Email: ${email}`,
-    organization ? `Organization: ${organization}` : null,
-    "",
-    message,
-  ]
-    .filter(Boolean)
-    .join("\n");
-
   try {
-    const { error } = await resend.emails.send({
-      from,
-      to: CONTACT_EMAIL,
-      replyTo: email,
-      subject: `New contact form message from ${name}`,
-      text,
-    });
+    const response = await fetch(
+      `https://formsubmit.co/ajax/${encodeURIComponent(CONTACT_EMAIL)}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          organization,
+          message,
+          _replyto: email,
+          _subject: `New contact form message from ${name}`,
+          _template: "table",
+          _captcha: "false",
+        }),
+      }
+    );
 
-    if (error) {
+    const data = (await response.json().catch(() => null)) as
+      | { success?: string; message?: string }
+      | null;
+
+    if (!response.ok) {
       return Response.json({ error: "Failed to send message." }, { status: 502 });
+    }
+
+    if (data && data.success === "false") {
+      return Response.json(
+        { error: data.message || "Failed to send message." },
+        { status: 502 }
+      );
     }
 
     return Response.json({ ok: true });
