@@ -49,6 +49,22 @@
       }
     });
 
+  var linkedIn = "https://www.linkedin.com/in/carrie-grace-28199826b/";
+  var instagram = "https://www.instagram.com/carriegracelife/";
+  header
+    .querySelectorAll(
+      ".Header_SocialsMobile__0QYKc a, .Menu_Menu___Nwdq > ul > li.social a"
+    )
+    .forEach(function (link) {
+      var label = (link.getAttribute("aria-label") || "").toLowerCase();
+      if (label.indexOf("linkedin") !== -1) link.href = linkedIn;
+      else if (label.indexOf("instagram") !== -1) link.href = instagram;
+      if (label.indexOf("linkedin") !== -1 || label.indexOf("instagram") !== -1) {
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      }
+    });
+
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") setOpen(false);
   });

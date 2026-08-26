@@ -4745,6 +4745,26 @@ var processHtml = "<section class=\"cg-process\" id=\"process\"><div class=\"wra
         });
     }
 
+    function ensureSocialLinks() {
+      var linkedIn = "https://www.linkedin.com/in/carrie-grace-28199826b/";
+      var instagram = "https://www.instagram.com/carriegracelife/";
+      var selector =
+        ".Header_SocialsMobile__0QYKc a, .Menu_Menu___Nwdq > ul > li.social a";
+
+      document.querySelectorAll(selector).forEach(function (link) {
+        var label = (link.getAttribute("aria-label") || "").toLowerCase();
+        if (label.indexOf("linkedin") !== -1) {
+          link.href = linkedIn;
+        } else if (label.indexOf("instagram") !== -1) {
+          link.href = instagram;
+        } else {
+          return;
+        }
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      });
+    }
+
     function syncPage() {
       try {
         disableLenisForSticky();
@@ -4761,6 +4781,7 @@ var processHtml = "<section class=\"cg-process\" id=\"process\"><div class=\"wra
         ensureHeroImage();
         ensureLogo();
         observeLogo();
+        ensureSocialLinks();
       } catch (e) {}
       ensureTitle();
       observeTitle();
