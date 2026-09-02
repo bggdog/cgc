@@ -1,7 +1,6 @@
 import type { ServicePageContent } from "./types";
 import { siteImageSrc } from "../site-images";
 import { CONTACT_MAILTO } from "../site-links";
-import { CONTACT_MAILTO } from "../site-links";
 
 export const organizationalStructureSetup: ServicePageContent = {
   slug: "organizational-structure-setup",

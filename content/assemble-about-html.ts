@@ -3,7 +3,6 @@ import path from "path";
 import { assembleHeader } from "./assemble-header";
 import { siteImageSrc } from "./site-images";
 import { CONTACT_MAILTO } from "./site-links";
-import { CONTACT_MAILTO } from "./site-links";
 
 const contentDir = path.join(process.cwd(), "content", "about");
 
