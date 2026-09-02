@@ -1,5 +1,6 @@
 import type { ServicePageContent } from "./types";
 import { siteImageSrc } from "../site-images";
+import { CONTACT_MAILTO } from "../site-links";
 
 export const teamDevelopmentCare: ServicePageContent = {
   slug: "team-development-care",
@@ -10,8 +11,8 @@ export const teamDevelopmentCare: ServicePageContent = {
     { text: "Care & Retreats" },
   ],
   titleAriaLabel: "Team Development, Care and Retreats",
-  lede: "Equip your managers and staff with healthy team dynamics, genuine care, and immersive retreat experiences — building culture that reduces attrition and re-energizes teams doing hard, meaningful work.",
-  chips: ["For Managers & Staff", "Retreats & Culture", "Retention Driven"],
+  lede: "Equip managers and staff with the tools to build healthier teams, strengthen connection, and create a culture where people feel valued, supported, and equipped to sustain meaningful, mission-driven work.",
+  chips: ["For Managers & Staff", "Retreats & Culture", "Retention-Focused"],
   frameTag: "Team Development",
   heroImage: {
     src: siteImageSrc("team-development-care"),
@@ -68,6 +69,6 @@ export const teamDevelopmentCare: ServicePageContent = {
   closeHeadingAriaLabel: "Ready to care differently?",
   closeSub:
     "The first step is a conversation — no pitch, no pressure. Tell us where your team is today and what you need, and we'll go from there.",
-  ctaHref: "mailto:hello@carriegrace.consulting",
+  ctaHref: CONTACT_MAILTO,
   ctaLabel: "Schedule a Discovery Call",
 };

@@ -1,5 +1,6 @@
 import type { ServicePageContent } from "./types";
 import { siteImageSrc } from "../site-images";
+import { CONTACT_MAILTO } from "../site-links";
 
 export const executiveConsulting: ServicePageContent = {
   slug: "executive-consulting",
@@ -10,8 +11,8 @@ export const executiveConsulting: ServicePageContent = {
     { text: "& Board Consulting" },
   ],
   titleAriaLabel: "Executive and Board Consulting",
-  lede: "Strategic guidance for executive directors, CEOs, and boards — strengthening governance, clarifying roles, and building the leadership partnerships that high-performing nonprofits require.",
-  chips: ["For Leaders & Boards", "Governance Focused", "Tailored Engagements"],
+  lede: "Strategic support for executive directors, CEOs & Boards to clarify roles, strengthen leadership, and build healthy partnerships that help the organization thrive.",
+  chips: ["Guaranteed sustainability", "Governance Focused", "Tailored Engagements"],
   frameTag: "Executive Consulting",
   heroImage: {
     src: siteImageSrc("executive-consulting"),
@@ -64,6 +65,6 @@ export const executiveConsulting: ServicePageContent = {
   closeHeadingAriaLabel: "Ready to lead differently?",
   closeSub:
     "The first step is a conversation — no pitch, no pressure. Tell us where your leadership and board are today, and we'll go from there.",
-  ctaHref: "mailto:hello@carriegrace.consulting",
+  ctaHref: CONTACT_MAILTO,
   ctaLabel: "Schedule a Discovery Call",
 };

@@ -1,5 +1,7 @@
 import type { ServicePageContent } from "./types";
 import { siteImageSrc } from "../site-images";
+import { CONTACT_MAILTO } from "../site-links";
+import { CONTACT_MAILTO } from "../site-links";
 
 export const organizationalStructureSetup: ServicePageContent = {
   slug: "organizational-structure-setup",
@@ -50,6 +52,6 @@ export const organizationalStructureSetup: ServicePageContent = {
   closeHeadingAriaLabel: "Ready to build well?",
   closeSub:
     "The first step is a conversation — no pitch, no pressure. Tell us where your structure is today, and we'll go from there.",
-  ctaHref: "mailto:hello@carriegrace.consulting",
+  ctaHref: CONTACT_MAILTO,
   ctaLabel: "Schedule a Discovery Call",
 };

@@ -2,6 +2,8 @@ import { readFileSync } from "fs";
 import path from "path";
 import { assembleHeader } from "./assemble-header";
 import { siteImageSrc } from "./site-images";
+import { CONTACT_MAILTO } from "./site-links";
+import { CONTACT_MAILTO } from "./site-links";
 
 const contentDir = path.join(process.cwd(), "content", "zero-turnover");
 
@@ -64,7 +66,7 @@ ${header.markup}
         <p class="hero-lede">The nonprofit sector loses extraordinary people every year — not because the mission fails, but because the culture does. This program was built to change that permanently. <strong>We don't patch the problem. We rebuild the foundation.</strong></p>
 
         <div class="hero-ctas">
-          <a class="cta" href="mailto:hello@carriegrace.consulting" data-magnetic>
+          <a class="cta" href="${CONTACT_MAILTO}" data-magnetic>
             Inquire About This Program
             <span class="ring">${arrowIcon}</span>
           </a>
@@ -162,7 +164,7 @@ ${header.markup}
         <span class="w"><span class="script">history.</span></span>
       </h2>
       <p class="sub">A comprehensive, proven approach to eliminating staff burnout and turnover in mission-driven organizations — for good.</p>
-      <a class="cta" href="mailto:hello@carriegrace.consulting" data-magnetic>
+          <a class="cta" href="${CONTACT_MAILTO}" data-magnetic>
         Inquire About This Program
         <span class="ring">${arrowIcon}</span>
       </a>

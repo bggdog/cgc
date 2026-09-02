@@ -2,6 +2,8 @@ import { readFileSync } from "fs";
 import path from "path";
 import { assembleHeader } from "./assemble-header";
 import { siteImageSrc } from "./site-images";
+import { CONTACT_MAILTO } from "./site-links";
+import { CONTACT_MAILTO } from "./site-links";
 
 const contentDir = path.join(process.cwd(), "content", "about");
 
@@ -46,7 +48,7 @@ ${header.markup}
         <span class="w"><span>Meets</span></span><br/>
         <span class="w"><span class="script">Excellence</span></span>
       </h1>
-      <p class="lede">Carrie Grace has spent her career at the intersection of nonprofit leadership, trauma-informed care, and organizational health. As a recognized expert in anti-human trafficking — including survivor aftercare program development — she brings <strong>rare, hard-won insight</strong> to the organizations doing the most difficult work in the world.</p>
+      <p class="lede">Carrie Grace has spent her career at the intersection of nonprofit leadership, trauma-informed care, and organizational health. As a recognized specialist in anti-human trafficking — including survivor aftercare program development — she brings <strong>rare, hard-won insight</strong> to the organizations doing the most difficult work in the world.</p>
       <div class="pills">
         <span class="pill" style="--i:0">Anti-Trafficking Specialist</span>
         <span class="pill" style="--i:1">Executive Coach</span>
@@ -107,7 +109,7 @@ ${header.markup}
         <p class="statement" data-illuminate>Her consulting doesn't just solve today's problems. It equips your leadership, strengthens your structure, and builds a culture your people will choose to stay in — year after year.</p>
         <div class="side">
           <p>From frontline anti-trafficking work to the boardroom, Carrie brings both depth of experience and genuine care to every engagement.</p>
-          <a class="cta" href="mailto:hello@carriegrace.consulting" data-magnetic>
+          <a class="cta" href="${CONTACT_MAILTO}" data-magnetic>
             Meet Carrie — Book a Call
             <span class="ring">${arrowIcon}</span>
           </a>
