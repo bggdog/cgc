@@ -6,16 +6,26 @@ import { MockIntersectionObserver, setMediaQuery } from "@/tests/helpers/dom-moc
 describe("Reveal", () => {
   it("starts hidden, without the in class", () => {
     const { container } = render(
-      <Reveal className="hero">
+      <Reveal className="band">
         <p>content</p>
       </Reveal>
     );
     expect(container.querySelector("section")).not.toHaveClass("in");
   });
 
+  it("starts revealed when eager (above-the-fold hero)", () => {
+    const { container } = render(
+      <Reveal className="hero" eager>
+        <p>content</p>
+      </Reveal>
+    );
+    expect(container.querySelector("section")).toHaveClass("hero", "in");
+    expect(MockIntersectionObserver.instances).toHaveLength(0);
+  });
+
   it("adds the in class once the section intersects", () => {
     const { container } = render(
-      <Reveal className="hero">
+      <Reveal className="band">
         <p>content</p>
       </Reveal>
     );
@@ -24,12 +34,12 @@ describe("Reveal", () => {
       MockIntersectionObserver.instances[0].trigger(true);
     });
 
-    expect(container.querySelector("section")).toHaveClass("hero", "in");
+    expect(container.querySelector("section")).toHaveClass("band", "in");
   });
 
   it("stays hidden while the section is out of view", () => {
     const { container } = render(
-      <Reveal className="hero">
+      <Reveal className="band">
         <p>content</p>
       </Reveal>
     );
@@ -45,7 +55,7 @@ describe("Reveal", () => {
     setMediaQuery("(prefers-reduced-motion: reduce)", true);
 
     const { container } = render(
-      <Reveal className="hero">
+      <Reveal className="band">
         <p>content</p>
       </Reveal>
     );

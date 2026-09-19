@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import {
   INSTAGRAM_ICON_PATH,
@@ -56,18 +56,36 @@ export function UniversityHeader({ currentPath, authSlot }: UniversityHeaderProp
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const progressBarRef = useRef<HTMLDivElement>(null);
+  const scrolledRef = useRef(false);
+  const rafRef = useRef(0);
 
   useEffect(() => {
-    function onScroll() {
+    function updateScrollChrome() {
+      rafRef.current = 0;
       const max = document.documentElement.scrollHeight - window.innerHeight;
-      setProgress(max > 0 ? (window.scrollY / max) * 100 : 0);
-      setScrolled(window.scrollY > 8);
+      const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      if (progressBarRef.current) {
+        progressBarRef.current.style.width = `${pct}%`;
+      }
+      const nextScrolled = window.scrollY > 8;
+      if (nextScrolled !== scrolledRef.current) {
+        scrolledRef.current = nextScrolled;
+        setScrolled(nextScrolled);
+      }
+    }
+
+    function onScroll() {
+      if (rafRef.current) return;
+      rafRef.current = window.requestAnimationFrame(updateScrollChrome);
     }
 
     window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    updateScrollChrome();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (rafRef.current) window.cancelAnimationFrame(rafRef.current);
+    };
   }, []);
 
   useEffect(() => {
@@ -113,7 +131,7 @@ export function UniversityHeader({ currentPath, authSlot }: UniversityHeaderProp
         className={`ProgressBar_Progress__pez_8${scrolled ? " ProgressBar_Visible__1Oewf" : ""}`}
       >
         <div className="ProgressBar_BarBg__IBGkG" />
-        <div className="ProgressBar_Bar__lPLis" style={{ width: `${progress}%` }} />
+        <div className="ProgressBar_Bar__lPLis" ref={progressBarRef} />
       </div>
 
       <div

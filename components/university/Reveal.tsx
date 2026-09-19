@@ -9,6 +9,11 @@ type RevealProps = {
   className?: string;
   as?: "section" | "div";
   threshold?: number;
+  /**
+   * Above-the-fold content. Starts revealed so the visitor never sees a blank
+   * hero while IntersectionObserver catches up (or fails on tall sections).
+   */
+  eager?: boolean;
 };
 
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
@@ -40,20 +45,29 @@ function getReducedMotionServerSnapshot(): boolean {
   return false;
 }
 
+/** True when any pixel of the element intersects the viewport. */
+function isInViewport(node: HTMLElement): boolean {
+  const rect = node.getBoundingClientRect();
+  const vh = window.innerHeight || document.documentElement.clientHeight;
+  const vw = window.innerWidth || document.documentElement.clientWidth;
+  return rect.bottom > 0 && rect.right > 0 && rect.top < vh && rect.left < vw;
+}
+
 /**
  * Adds the `in` class when the element scrolls into view, which is what the
  * university stylesheet keys every entrance animation off. Content is shown
- * immediately when the visitor prefers reduced motion, or when
- * IntersectionObserver is unavailable.
+ * immediately when `eager`, when the visitor prefers reduced motion, when
+ * already on screen at mount, or when IntersectionObserver is unavailable.
  */
 export function Reveal({
   children,
   className = "",
   as = "section",
-  threshold = 0.15,
+  threshold = 0.05,
+  eager = false,
 }: RevealProps) {
   const ref = useRef<HTMLElement>(null);
-  const [intersected, setIntersected] = useState(false);
+  const [intersected, setIntersected] = useState(eager);
   const prefersReducedMotion = useSyncExternalStore(
     subscribeToReducedMotion,
     getReducedMotionSnapshot,
@@ -61,14 +75,19 @@ export function Reveal({
   );
 
   useEffect(() => {
-    if (intersected || prefersReducedMotion) return;
+    if (intersected || prefersReducedMotion || eager) return;
 
     const node = ref.current;
     if (!node) return;
 
+    // Tall sections can fail a high threshold while still filling the screen.
+    // Arm immediately if anything is already visible.
+    if (isInViewport(node)) {
+      const id = window.setTimeout(() => setIntersected(true), 0);
+      return () => window.clearTimeout(id);
+    }
+
     if (typeof IntersectionObserver === "undefined") {
-      // No observer support: reveal on the next tick rather than calling
-      // setState synchronously in the effect body.
       const id = window.setTimeout(() => setIntersected(true), 0);
       return () => window.clearTimeout(id);
     }
@@ -82,15 +101,24 @@ export function Reveal({
           }
         }
       },
-      { threshold }
+      { threshold, rootMargin: "0px 0px -8% 0px" }
     );
 
     observer.observe(node);
-    return () => observer.disconnect();
-  }, [intersected, prefersReducedMotion, threshold]);
+
+    // Safety net: if IO never fires (iframe / odd viewport), don't leave a blank page.
+    const fallback = window.setTimeout(() => {
+      if (isInViewport(node)) setIntersected(true);
+    }, 400);
+
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(fallback);
+    };
+  }, [intersected, prefersReducedMotion, threshold, eager]);
 
   const Tag = as as ElementType;
-  const shown = intersected || prefersReducedMotion;
+  const shown = intersected || prefersReducedMotion || eager;
   const classes = [className, shown ? "in" : ""].filter(Boolean).join(" ");
 
   return (

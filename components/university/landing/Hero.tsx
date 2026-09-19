@@ -17,7 +17,7 @@ const CHIPS = [
 
 export function Hero() {
   return (
-    <Reveal className="hero">
+    <Reveal className="hero" eager>
       <div className="wrap">
         <div className="hero-grid">
           <div>

@@ -42,6 +42,8 @@ export function MagneticCta({ href, label, variant = "primary" }: MagneticCtaPro
     const x = clampPull(event.clientX - (rect.left + rect.width / 2));
     const y = clampPull(event.clientY - (rect.top + rect.height / 2));
 
+    // Clear any leave transition so tracking stays 1:1 with the pointer.
+    node.style.transition = "none";
     node.style.transform = `translate(${x}px, ${y}px)`;
   }
 
@@ -52,7 +54,10 @@ export function MagneticCta({ href, label, variant = "primary" }: MagneticCtaPro
     node.style.transition = "transform .6s cubic-bezier(.22,1,.36,1)";
     node.style.transform = "translate(0px, 0px)";
     window.setTimeout(() => {
-      node.style.transition = "";
+      if (node.style.transform === "translate(0px, 0px)") {
+        node.style.transition = "";
+        node.style.transform = "";
+      }
     }, 600);
   }
 

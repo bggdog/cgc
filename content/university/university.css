@@ -56,7 +56,7 @@
 .lau h1{
   font-weight:600;
   font-size:clamp(42px, 5.4vw, 80px);
-  line-height:1.04;
+  line-height:1.14;
   letter-spacing:-.025em;
   color:var(--ink);
   margin-bottom:26px;
@@ -71,15 +71,16 @@
 }
 .lau .script{
   font-family:var(--font-pinyon), cursive;
-  font-weight:400; font-size:1.32em;
+  font-weight:400; font-size:1.22em;
   color:var(--green);
+  line-height:1;
 }
 
 /* per-word headline reveal; --i is set per word by <WordReveal> */
 .lau .w{
   display:inline-block; overflow:hidden;
   vertical-align:bottom;
-  padding-bottom:.14em; margin-bottom:-.14em;
+  padding-bottom:.2em; margin-bottom:-.12em;
 }
 .lau .w > span{
   display:inline-block;
