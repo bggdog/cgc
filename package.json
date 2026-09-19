@@ -12,6 +12,7 @@
     "format:content": "npx prettier@3.5.3 --parser html --write content/colabs-home-head.html content/colabs-home-body.html && npx prettier@3.5.3 --write content/colabs-next-data.json"
   },
   "dependencies": {
+    "@clerk/nextjs": "^7.9.4",
     "next": "16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4"

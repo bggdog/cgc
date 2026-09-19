@@ -1,0 +1,93 @@
+/* Auth controls in the university header + sign-in / sign-up pages */
+
+.lau-auth {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.lau-auth-signin {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  color: var(--paper, #fdfcf9);
+  background: var(--green, #1d4a3a);
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  transition: transform 0.25s var(--ease, cubic-bezier(0.22, 1, 0.36, 1)),
+    background 0.25s var(--ease, cubic-bezier(0.22, 1, 0.36, 1));
+}
+
+.lau-auth-signin:hover {
+  background: var(--green-2, #163c2f);
+}
+
+.lau-auth-signin:focus-visible {
+  outline: 2px solid var(--gold, #d3aa6e);
+  outline-offset: 3px;
+}
+
+.lau-auth-avatar {
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.lau-auth-page {
+  min-height: calc(100vh - 5rem);
+  display: grid;
+  place-items: center;
+  padding: 3rem 1.25rem 4rem;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(211, 170, 110, 0.18), transparent 55%),
+    radial-gradient(ellipse at 80% 100%, rgba(29, 74, 58, 0.08), transparent 50%),
+    var(--paper, #fdfcf9);
+}
+
+.lau-auth-shell {
+  min-height: 100vh;
+  background: var(--paper, #fdfcf9);
+  color: var(--ink, #1e2420);
+}
+
+.lau-auth-shell-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(30, 36, 32, 0.08);
+}
+
+.lau-auth-shell-bar a {
+  color: var(--green, #1d4a3a);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lau-auth-shell-bar a:hover {
+  color: var(--green-2, #163c2f);
+}
+
+.lau-auth-unavailable {
+  max-width: 28rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.lau-auth-unavailable h1 {
+  font-family: var(--font-pinyon, "Pinyon Script", cursive);
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--green, #1d4a3a);
+  margin: 0 0 0.75rem;
+}
+
+.lau-auth-unavailable p {
+  margin: 0;
+  color: var(--body, #626b66);
+  line-height: 1.55;
+}
