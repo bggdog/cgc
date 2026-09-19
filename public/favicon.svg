@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Carrie Grace">
+  <rect width="32" height="32" rx="7" fill="#1d4a3a"/>
+  <!-- Interlocking CG monogram -->
+  <path
+    d="M15.4 7.6c-4.9.2-8.1 3.5-8.1 8.4s3.2 8.2 8.1 8.4"
+    fill="none"
+    stroke="#f5ead7"
+    stroke-width="3.2"
+    stroke-linecap="round"
+  />
+  <path
+    d="M16.6 7.6c4.9.2 8.1 3.5 8.1 8.4 0 4.9-3.2 8.2-8.1 8.4"
+    fill="none"
+    stroke="#d3aa6e"
+    stroke-width="3.2"
+    stroke-linecap="round"
+  />
+  <path
+    d="M16.6 16h5.6"
+    fill="none"
+    stroke="#d3aa6e"
+    stroke-width="2.7"
+    stroke-linecap="round"
+  />
+</svg>
