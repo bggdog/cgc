@@ -4,6 +4,7 @@ import { UniversityShell } from "./shell";
 
 import "@/content/header/header-styles.css";
 import "@/content/university/university.css";
+import "@/content/university/landing.css";
 
 export const metadata: Metadata = {
   title: {
