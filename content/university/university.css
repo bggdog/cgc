@@ -291,3 +291,12 @@
   }
   .lau .w > span{ transform:none !important; }
 }
+
+/* Account controls slot in the header nav (filled from Phase 3 onward). */
+.lau-shell .Menu_Auth__lau{
+  display:flex; align-items:center;
+  padding-left:14px;
+}
+@media (max-width:1024px){
+  .lau-shell .Menu_Auth__lau{ padding:14px 0; }
+}
