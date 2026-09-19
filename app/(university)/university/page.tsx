@@ -8,8 +8,12 @@ import { QuizTeaser } from "@/components/university/landing/QuizTeaser";
 import { MEMBERSHIP } from "@/lib/university/course-data";
 import { formatPrice, getPublishedCourses } from "@/lib/university/courses";
 
+// No `title` here: the layout's `default` ("Live Abundantly University")
+// already covers this page. Setting one would be substituted into the
+// layout's `template` ("%s · Live Abundantly University"), duplicating the
+// site name. Child routes (quizzes, course detail pages) should set their
+// own `title` so the template renders "<Page> · Live Abundantly University".
 export const metadata: Metadata = {
-  title: "Live Abundantly University",
   description:
     "Self-paced courses, guided journals and free self-assessments from Carrie Grace, for leaders who want to flourish without burning out.",
 };
