@@ -1258,6 +1258,8 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
   - `LINKEDIN_ICON_PATH`, `INSTAGRAM_ICON_PATH` from `@/content/social-icons`
   - `<UniversityHeader currentPath authSlot? />` from `@/components/university/UniversityHeader`
 
+**On the duplicated services list:** `UniversityHeader.tsx` repeats the three service nav entries that `content/assemble-header.ts` also holds. This is deliberate — `assemble-header.ts` imports `fs` at module scope, so a client component cannot import from it, and only the SVG path data was worth its own module. If a cleaner shared source is warranted, that is a follow-up, not part of this task.
+
 **Why reuse the existing stylesheet:** the header's CSS in `content/header/header-styles.css` is 12 KB of hashed class names. Rather than reimplementing it, the React header reproduces the same markup and class names and the layout imports that same file, which guarantees pixel parity with the rest of the site. The vanilla behaviors in `content/header/header-script.js` (menu toggle, submenu, scroll progress, Escape to close) become React state.
 
 The `authSlot` prop is intentionally unused in this phase — Phase 3 passes Clerk's buttons into it. Nothing here links to `/sign-in`, which does not exist yet.
