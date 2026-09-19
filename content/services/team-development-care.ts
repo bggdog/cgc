@@ -4,57 +4,53 @@ import { CONTACT_MAILTO } from "../site-links";
 
 export const teamDevelopmentCare: ServicePageContent = {
   slug: "team-development-care",
-  pageTitle: "Team Development, Care & Retreats — Carrie Grace",
-  crumbName: "Team Development, Care & Retreats",
+  pageTitle: "Team Development & Retreats — Carrie Grace",
+  crumbName: "Team Development & Retreats",
   titleWords: [
     { text: "Team Development", breakAfter: true },
-    { text: "Care & Retreats" },
+    { text: "& Retreats" },
   ],
-  titleAriaLabel: "Team Development, Care and Retreats",
-  lede: "Equip managers and staff with the tools to build healthier teams, strengthen connection, and create a culture where people feel valued, supported, and equipped to sustain meaningful, mission-driven work.",
+  titleAriaLabel: "Team Development and Retreats",
+  lede: "Create space for your people to reconnect, reset, and grow — through intentional team development and immersive retreat experiences designed to strengthen both the individual and the team.",
   chips: ["For Managers & Staff", "Retreats & Culture", "Retention-Focused"],
   frameTag: "Team Development",
   heroImage: {
     src: siteImageSrc("team-development-care"),
-    alt: "Team development, care, and retreats",
+    alt: "Team development and retreats",
   },
-  bandHeadingBefore: "Care that",
-  bandHeadingScript: "keeps",
-  bandHeadingAfter: "people",
+  bandHeadingBefore: "Care That",
+  bandHeadingScript: "Keeps",
+  bandHeadingAfter: "People",
   bandSub:
-    "Teams thrive when care is structured and time apart is intentional — these are the pillars most team development and retreat engagements build from.",
+    "People stay where they feel valued. Our team development and retreat experiences create intentional space to care for your people, strengthen your team, and reconnect them to each other and the mission they serve.",
   includes: [
     {
-      title: "Healthy Team Dynamics",
-      body: "Practical frameworks for communication, feedback, and collaboration that help teams work with honesty and trust.",
+      title: "Healthy Team Culture",
+      body: "Build a team culture where people communicate well, trust one another, feel valued, and know they matter.",
     },
     {
-      title: "Conflict Resolution Skills",
-      body: "Tools for naming tension early and working through it — before small issues become culture-breaking patterns.",
+      title: "Navigating Conflict",
+      body: "Give your team practical tools to have hard conversations, work through tension, and move forward in healthy ways.",
     },
     {
-      title: "Manager Coaching & Support",
-      body: "Equipping the leaders closest to your staff with the skills to care well without burning themselves out.",
+      title: "Caring for Your People",
+      body: "Create meaningful rhythms of care that remind your people they are more than the work they produce.",
     },
     {
-      title: "Culture of Retention",
-      body: "Everyday rhythms and practices that make people feel valued, supported, and willing to stay.",
+      title: "Supporting Your Leaders",
+      body: "Equip managers and team leaders to lead people well, recognize burnout early, and create healthier environments for their teams.",
     },
     {
-      title: "Custom Retreat Design",
-      body: "Agendas shaped around your team's real needs — whether that's rebuilding trust, clarifying vision, or simply breathing again.",
+      title: "Retreats That Matter",
+      body: "No cookie-cutter agendas. Every retreat is thoughtfully created around your people, your culture, and what your team needs in this season.",
     },
     {
-      title: "Facilitated Trust Building",
-      body: "Structured conversations and experiences that restore connection without feeling forced or performative.",
+      title: "Reconnection & Renewal",
+      body: "Create space to step away from the work, breathe, reconnect, and remember why the work matters.",
     },
     {
-      title: "Vision & Alignment Sessions",
-      body: "Space to recalibrate shared purpose, priorities, and how you'll move forward together.",
-    },
-    {
-      title: "Integration & Follow-Through",
-      body: "Takeaways and next steps so the retreat's momentum continues long after everyone is back at work.",
+      title: "Bringing It Back Home",
+      body: "Turn what happens in the room into practical next steps your team can carry back into the everyday.",
     },
   ],
   wideImage: {

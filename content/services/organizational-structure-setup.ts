@@ -11,34 +11,34 @@ export const organizationalStructureSetup: ServicePageContent = {
     { text: "Structure & Setup" },
   ],
   titleAriaLabel: "Organizational Structure & Setup",
-  lede: "Whether you're scaling, restructuring, or launching, we help you build an org chart and operational framework that serves your people and your mission.",
+  lede: "Whether you're launching, growing, or restructuring, we help you build the right structure for where you're going — with clear roles, healthy systems, and your mission at the center.",
   chips: ["Scaling & Launch", "Ops Framework", "People-Centered"],
   frameTag: "Org Structure",
   heroImage: {
     src: siteImageSrc("organizational-structure-setup"),
     alt: "Organizational structure and setup",
   },
-  bandHeadingBefore: "Structure that",
-  bandHeadingScript: "serves",
-  bandHeadingAfter: "people",
+  bandHeadingBefore: "Structure That",
+  bandHeadingScript: "Serves",
+  bandHeadingAfter: "People",
   bandSub:
-    "The right structure unlocks clarity and capacity — these are the pillars most organizational setup engagements build from.",
+    "The right structure brings clarity, creates capacity, and helps people do their best work. Every engagement is built around what your organization needs now — and where you're going next.",
   includes: [
     {
       title: "Org Chart & Role Design",
-      body: "Clear mission, role clarity, reporting lines, so people know how they fit and who they support.",
+      body: "Create clear roles, reporting lines, and responsibilities so people understand where they fit, what they own, and how their work supports the mission.",
     },
     {
       title: "Operational Frameworks",
-      body: "Actionable strategies, techniques, workflows, and systems that keep the mission moving without bottlenecks or burnout with long term sustainability.",
+      body: "Build practical systems and workflows that make the work easier to carry — reducing bottlenecks, protecting your people, and creating greater long-term sustainability.",
     },
     {
       title: "Growth & Restructuring Support",
-      body: "Guidance through scale-ups, launches, and reorganizations — protecting culture while the structure shifts.",
+      body: "Navigate growth, change, or reorganization with intention — strengthening the structure without losing the people and culture that matter.",
     },
     {
       title: "Implementation Roadmaps",
-      body: "A realistic path from current state to desired structure, with sequencing your team can actually follow.",
+      body: "Turn the plan into action with clear priorities, practical next steps, and a realistic path your team can actually follow.",
     },
   ],
   wideTag: "By Design",
