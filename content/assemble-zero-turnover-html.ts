@@ -62,7 +62,7 @@ ${header.markup}
           <span class="w"><span class="gold">Burnout.</span></span>
         </h1>
 
-        <p class="hero-lede">The nonprofit sector loses extraordinary people every year — not because the mission fails, but because the culture does. This program was built to change that permanently. <strong>We don't patch the problem. We rebuild the foundation.</strong></p>
+        <p class="hero-lede">The nonprofit sector loses extraordinary people every year — not because the mission fails, but because the culture does. Zero Turnover. Zero Burnout was created to change the way organizations care for, lead, and retain their people. <strong>We don't patch the problem. We rebuild the foundation.</strong></p>
 
         <div class="hero-ctas">
           <a class="cta" href="${CONTACT_MAILTO}" data-magnetic>
@@ -117,25 +117,25 @@ ${header.markup}
           <article class="pillar p1" style="--i:0">
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-3.5-2.6-6-6.5-6C5.5 10.5 8 13 12 13Z"/><path d="M12 10c0-3.2 2.4-5.5 6-5.5 0 3.2-2.4 5.5-6 5.5Z"/></svg></span>
             <h3>Cultural Roots</h3>
-            <p>Assess and redesign the underlying culture that determines whether people stay or go.</p>
+            <p>Get underneath the symptoms to uncover what's really shaping your culture — then strengthen what helps people stay, grow, and thrive.</p>
             <span class="notch"><span class="idx">01</span></span>
           </article>
           <article class="pillar p2" style="--i:1">
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 21h14"/><path d="M4 7h16"/><path d="M6.5 7 4 12.5a2.6 2.6 0 0 0 5 0L6.5 7ZM17.5 7 15 12.5a2.6 2.6 0 0 0 5 0L17.5 7Z"/></svg></span>
             <h3>Structural Balance</h3>
-            <p>Align roles, workloads, and leadership structures with sustainable human capacity.</p>
+            <p>Create greater clarity around roles, expectations, workloads, and leadership so the mission doesn't come at the expense of your people.</p>
             <span class="notch"><span class="idx">02</span></span>
           </article>
           <article class="pillar p3" style="--i:2">
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9.3c1-2.3 4.6-2.2 5.2.4.5 2.2-2.4 4.5-5.2 6.3-2.8-1.8-5.7-4.1-5.2-6.3.6-2.6 4.2-2.7 5.2-.4Z"/><path d="M3.5 19c2.5 1.6 5.4 2 8.5 2s6-.4 8.5-2"/></svg></span>
             <h3>Care Frameworks</h3>
-            <p>Embed care into management practices — not as a perk, but as an operating standard.</p>
+            <p>Build care into the way your organization operates — so people feel seen, supported, and valued, not just appreciated when they're already running on empty.</p>
             <span class="notch"><span class="idx">03</span></span>
           </article>
           <article class="pillar p4" style="--i:3">
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7"/><path d="M15 6.5 21 3v4"/><path d="M21 3l-5.5 5"/></svg></span>
             <h3>Retention Metrics</h3>
-            <p>Measure what matters and hold your organization accountable to the standards you set.</p>
+            <p>Pay attention to what your people are telling you. Identify the patterns that lead to burnout and turnover, measure what matters, and create accountability for lasting change.</p>
             <span class="notch"><span class="idx">04</span></span>
           </article>
         </div>
