@@ -151,7 +151,7 @@ export function assembleHeader(currentPath: string): {
         <li>
           <div class="Menu_Top___JOpe">
             <a class="${ztActive}" href="/zero-turnover"
-              ><span class="${ztActive || "  "}">Zero Turnover&trade;</span></a
+              ><span class="${ztActive || "  "}">Zero Turnover</span></a
             >
           </div>
         </li>

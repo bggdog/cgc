@@ -18,7 +18,7 @@ export function assembleZeroTurnoverHtml(): string {
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Zero Turnover. Zero Burnout.™ — Carrie Grace</title>
+<title>Zero Turnover. Zero Burnout. — Carrie Grace</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
@@ -52,14 +52,14 @@ ${header.markup}
         <nav class="crumbs" aria-label="Breadcrumb">
           <a href="/">Home</a><span class="sep">·</span>
           <a href="/#programs">Programs</a><span class="sep">·</span>
-          <span class="here">Zero Turnover™</span>
+          <span class="here">Zero Turnover</span>
         </nav>
 
-        <h1 aria-label="Zero Turnover. Zero Burnout.™">
+        <h1 aria-label="Zero Turnover. Zero Burnout.">
           <span class="w"><span>Zero</span></span>
           <span class="w"><span>Turnover.</span></span><br/>
           <span class="w"><span class="gold">Zero</span></span>
-          <span class="w"><span class="gold">Burnout.<span class="tm">™</span></span></span>
+          <span class="w"><span class="gold">Burnout.</span></span>
         </h1>
 
         <p class="hero-lede">The nonprofit sector loses extraordinary people every year — not because the mission fails, but because the culture does. This program was built to change that permanently. <strong>We don't patch the problem. We rebuild the foundation.</strong></p>
