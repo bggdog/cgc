@@ -1,7 +1,9 @@
 import { readFileSync } from "fs";
 import path from "path";
+import { escapeHtml } from "./escape-html";
 import { INSTAGRAM_ICON_PATH, LINKEDIN_ICON_PATH } from "./social-icons";
 import { INSTAGRAM_URL, LINKEDIN_URL } from "./site-links";
+import { SERVICE_NAV_ITEMS } from "./site-nav";
 
 const contentDir = path.join(process.cwd(), "content", "header");
 
@@ -24,15 +26,6 @@ const cornerSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
                 fill="#F9F8F6"
               ></path>
             </svg>`;
-
-const services = [
-  { label: "Executive Consulting", href: "/services/executive-consulting" },
-  { label: "Team Development &amp; Care", href: "/services/team-development-care" },
-  {
-    label: "Organizational Structure &amp; Setup",
-    href: "/services/organizational-structure-setup",
-  },
-];
 
 function activeClass(href: string, currentPath: string): string {
   if (href === currentPath) return "active";
@@ -80,21 +73,20 @@ export function assembleHeader(currentPath: string): {
   const universityActive = currentPath.startsWith("/university") ? "active" : "";
   const servicesActive = currentPath.startsWith("/services/") ? "active" : "";
 
-  const desktopSub = services
-    .map(
-      (s) => `<li>
-                    ${link(s.href, s.label, currentPath)}
+  // SERVICE_NAV_ITEMS holds raw labels (they contain "&"); escape them here,
+  // at the HTML call site. The React header interpolates the same raw labels
+  // into JSX, which escapes them itself.
+  const desktopSub = SERVICE_NAV_ITEMS.map(
+    (s) => `<li>
+                    ${link(s.href, escapeHtml(s.label), currentPath)}
                   </li>`
-    )
-    .join("\n                  ");
+  ).join("\n                  ");
 
-  const mobileSub = services
-    .map(
-      (s) => `<li>
-                        ${link(s.href, s.label, currentPath)}
+  const mobileSub = SERVICE_NAV_ITEMS.map(
+    (s) => `<li>
+                        ${link(s.href, escapeHtml(s.label), currentPath)}
                       </li>`
-    )
-    .join("\n                      ");
+  ).join("\n                      ");
 
   const markup = `<header class="Header_Header__RCJxb">
   <div class="ProgressBar_Progress__pez_8">

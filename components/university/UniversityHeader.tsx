@@ -8,6 +8,7 @@ import {
   LINKEDIN_ICON_PATH,
 } from "@/content/social-icons";
 import { INSTAGRAM_URL, LINKEDIN_URL } from "@/content/site-links";
+import { SERVICE_NAV_ITEMS } from "@/content/site-nav";
 
 type UniversityHeaderProps = {
   currentPath: string;
@@ -15,18 +16,9 @@ type UniversityHeaderProps = {
   authSlot?: ReactNode;
 };
 
-const SERVICES = [
-  { label: "Executive Consulting", href: "/services/executive-consulting" },
-  { label: "Team Development & Care", href: "/services/team-development-care" },
-  {
-    label: "Organizational Structure & Setup",
-    href: "/services/organizational-structure-setup",
-  },
-];
-
 const SOCIALS = [
-  { label: "linkedin", title: "LinkedIn", href: LINKEDIN_URL, path: LINKEDIN_ICON_PATH },
-  { label: "instagram", title: "Instagram", href: INSTAGRAM_URL, path: INSTAGRAM_ICON_PATH },
+  { label: "LinkedIn", href: LINKEDIN_URL, path: LINKEDIN_ICON_PATH },
+  { label: "Instagram", href: INSTAGRAM_URL, path: INSTAGRAM_ICON_PATH },
 ];
 
 function CornerSvg() {
@@ -47,7 +39,7 @@ function SocialItem({ social }: { social: (typeof SOCIALS)[number] }) {
         aria-label={social.label}
       >
         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <title>{social.title}</title>
+          <title>{social.label}</title>
           <path d={social.path} />
         </svg>
       </a>
@@ -193,7 +185,7 @@ export function UniversityHeader({ currentPath, authSlot }: UniversityHeaderProp
               </div>
 
               <ul className="Menu_Submenu___nIdT">
-                {SERVICES.map((service) => (
+                {SERVICE_NAV_ITEMS.map((service) => (
                   <li key={service.href}>{navLink(service.href, service.label)}</li>
                 ))}
               </ul>
@@ -203,7 +195,7 @@ export function UniversityHeader({ currentPath, authSlot }: UniversityHeaderProp
               >
                 <div>
                   <ul className="Menu_MobileSubmenu__u1our">
-                    {SERVICES.map((service) => (
+                    {SERVICE_NAV_ITEMS.map((service) => (
                       <li key={service.href}>{navLink(service.href, service.label)}</li>
                     ))}
                   </ul>

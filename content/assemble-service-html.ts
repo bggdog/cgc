@@ -1,6 +1,7 @@
 import { readFileSync } from "fs";
 import path from "path";
 import { assembleHeader } from "./assemble-header";
+import { escapeHtml } from "./escape-html";
 import type { ServiceImage, ServicePageContent, ServiceTitleWord } from "./services/types";
 
 const contentDir = path.join(process.cwd(), "content", "services");
@@ -8,14 +9,6 @@ const contentDir = path.join(process.cwd(), "content", "services");
 const cameraIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="3"/><circle cx="12" cy="12.5" r="3.4"/><path d="M8.5 5 10 3h4l1.5 2"/></svg>`;
 
 const arrowIcon = `<svg viewBox="0 0 24 24" fill="none"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-
-function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
 
 function renderTitleWords(words: ServiceTitleWord[]): string {
   return words
