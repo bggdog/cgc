@@ -18,39 +18,31 @@ export const executiveConsulting: ServicePageContent = {
     src: siteImageSrc("executive-consulting"),
     alt: "Executive and board consulting",
   },
-  bandHeadingBefore: "Built around",
-  bandHeadingScript: "your",
-  bandHeadingAfter: "leadership",
+  bandHeadingBefore: "Built Around",
+  bandHeadingScript: "What Matters",
+  bandHeadingAfter: "",
   bandSub:
-    "Every engagement is shaped in the discovery process — these are the pillars most executive and board clients build from.",
+    "No two organizations are the same. Every engagement begins with discovery and is shaped around your leadership, people, culture, and mission.",
   includes: [
     {
-      title: "Leadership Strategy Sessions",
-      body: "Focused working sessions on the decisions, transitions, and challenges sitting on your desk right now.",
+      title: "Executive Leadership Strategy",
+      body: "Focused, high-level guidance for the decisions, challenges, transitions, and opportunities in front of you right now.",
+    },
+    {
+      title: "Organizational Health & Culture",
+      body: "Strengthening the internal culture of your organization — addressing burnout, retention, team health, and the systems that impact your people.",
+    },
+    {
+      title: "Board & Executive Alignment",
+      body: "Creating greater clarity, trust, and partnership between boards and executive leaders — with clear roles, healthy communication, and shared purpose.",
     },
     {
       title: "Transition & Succession Planning",
-      body: "Steady guidance through leadership changes — protecting momentum, culture, and institutional trust.",
+      body: "Steady guidance through seasons of leadership change — protecting organizational health, institutional trust, and mission momentum.",
     },
     {
-      title: "Governance Clarity & Role Definition",
-      body: "Clear boundaries between board oversight and executive leadership — so everyone knows where their responsibility starts and stops.",
-    },
-    {
-      title: "Board–Executive Partnership Coaching",
-      body: "Facilitated work that rebuilds trust, communication, and shared purpose between the board and the executive team.",
-    },
-    {
-      title: "Meeting Rhythm & Decision Design",
-      body: "Practical structures for agendas, reporting, and decision-making that make board time count.",
-    },
-    {
-      title: "Onboarding & Board Development",
-      body: "Tools and guidance so new members contribute with confidence — and seasoned boards stay sharp and mission-aligned.",
-    },
-    {
-      title: "Sustainable Decision Frameworks",
-      body: "Tools and rhythms that make good decisions repeatable — long after the engagement ends.",
+      title: "Sustainable Structures & Strategy",
+      body: "Building practical systems, decision-making rhythms, and leadership practices that strengthen the organization long after our work together ends.",
     },
   ],
   wideImage: {
