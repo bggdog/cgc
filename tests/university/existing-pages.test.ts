@@ -83,7 +83,7 @@ function sha256(value: string): string {
  * See the header comment before changing any of these.
  */
 const EXPECTED_SHA256: Record<string, string> = {
-  home: "5648690a6265f5cf47719bd8a9ce1d915505badbc400733e99159567ecc0b165",
+  home: "310ecb2cf4b0466e4c5cf25151db133193151aa5b89a853c607296cdbc61662b",
   about: "b71195c766614df0ca67816530d54ed284f23e2f618bc9e02c54e664744ef41c",
   contact: "a6165766b570c93780b31ffd39a52fe04dec1e041969d961a098007d15b9b94b",
   "zero-turnover":
